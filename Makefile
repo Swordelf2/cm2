@@ -12,5 +12,8 @@ $(TARGET): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
+func.c: func.h
+main.c: func.h
+
 cleanup:
 	rm -f $(OBJ) $(TARGET)
